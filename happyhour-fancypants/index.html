@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Happy Hour App - How about a drink!?">
+	<meta name="keywords" content="happy hour, drink, beers">
+
+	<title>Happy Hour</title>
+
+	<!-- external CSS link -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Passion+One:400,700,900' rel='stylesheet' type='text/css'>
+
+	<script>
+		// Our List of Bars
+		var bars = [
+			'Raines Law Room',
+			'Blind Tiger',
+			'The Woods',
+			'One Month',
+			'Home Sweet Home',
+			'Union Pool',
+			'The Ninth Ward',
+			'Alderann',
+			'Coruscant',
+			'The Outer Rim Bar',
+		];
+
+		// Our List of Friends
+		var friends = [
+			'Mattan',
+			'Chris',
+			'Lee',
+			'that girl you forgot to text back',
+			'Sarah',
+			'Supreme Leader Snoke',
+			'Luke Skywalker',
+			'The Emperor',
+			'Chancellor Merkel',
+			'Justin Trudeau',
+		];
+
+		var randomBarNumber = Math.floor(Math.random() * bars.length);
+		var randomHuman = Math.floor(Math.random() * friends.length);
+		var barname = bars[randomBarNumber];
+		var human = friends[randomHuman];
+
+		if (randomBarNumber % 2 == 0) {
+			document.write('How about you escape to <strong>' + barname + ' in a landspeeder '
+			+ '</strong> with <strong>' + human + '</strong>? <br>');
+			document.write('<br> <img src="images/nene.gif" alt="Nene Says No">');
+		}
+
+		if (randomBarNumber % 2 != 0) {
+			document.write('How about you escape to <strong>' + barname + ' in a YT-1300 freighter '
+			+ '</strong> with <strong>' + human + '</strong>? <br>');
+			document.write('<br> <img src="images/yass.gif" alt="Bernie Says Yass">');
+		}
+
+	</script>
+</head>
+
+<body>
+	<!-- PAGE CONTENT WILL BE PRINTED HERE -->
+</body>
+
+</html>
+
+<!-- Question Answers
+
+0.) 0.)	document.write(randomBarNumber); writes out in the body of the page which entry in our array of bars has been randomly selected! When you refresh the number will change.
+
+1.) Arrays start with 0, not 1!
+
+2.) 2.)	If you replace bars[randomBarNumber] with bars[3] it'll always print out the 4th value -
+remember arrays start with 0 (0,1,2,3)
+
+3.) Array.length will return the number of entries in the array.
+
+4.) Math.floor rounds down to the nearest integer. This is important in our program so that the random # corresponds to one of the spots in the array.
+
+5.) 'Math' is a javascript object that can be used to call-up certain fixed values (such as Euler's number, Pi/etc) - JS Math calls these 'properties'
+it can also be used to perform basic math operations on the variable/number inserted - math.Floor above is one example
+Math.floor(x), would round x down to the nearest integer, another one would be Math.cos(x) which would return the cosine of x in radians.

@@ -1,0 +1,13 @@
+
+body {
+	background-image: url("../images/space.jpg");
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+	background-size: cover;
+	padding: 15px;
+	font-size: 45px;
+	font-family: 'Passion One', cursive;
+	color: #ffffff;
+	text-align: center;
+}
